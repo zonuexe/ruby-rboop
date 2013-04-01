@@ -1,20 +1,24 @@
 #require "ruby-oop/version"
 
-Klass = ->(klass){
-  lex = {
-    methods: {},
-    class_methods: {
-      new: ->{}
-    },
-  }.merge(klass)
-  kvars = {}
+module RubyOOP
+  Klass = ->(klass){
+    lex = {
+      methods: {},
+      class_methods: {
+        new: ->{}
+      },
+    }.merge(klass)
+    kvars = {}
 
-  return ->(source){
-    object = {source: source}
-    vars = {}
-    return ->(name, *as){lex[:methods][name][*[object]+as]}
+    return ->(source){
+      object = {source: source}
+      vars = {}
+      return ->(name, *as){lex[:methods][name][*[object]+as]}
+    }
   }
-}
+end
+
+Klass = RubyOOP::Klass
 
 StringWrapper = Klass[
   name: 'StringWrapper',
