@@ -1,6 +1,7 @@
 #require "ruby-oop/version"
 
 module RubyOOP
+  NO_REQUIRE ||= false
   Klass = ->(klass){
     lex = {
       methods: {},
@@ -18,7 +19,9 @@ module RubyOOP
   }
 end
 
-Klass = RubyOOP::Klass
+unless RubyOOP::NO_REQUIRE
+  Klass = RubyOOP::Klass
+end
 
 StringWrapper = Klass[
   name: 'StringWrapper',
