@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ruby-oop/version'
+require 'rboop/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'ruby-oop'
   spec.version       = Ruby::OOP::VERSION
   spec.authors       = ['USAMI Kenta']
   spec.email         = ['tadsan@zonu.me']
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "Object-Oriented Programming for Ruby"
+  spec.summary       = 'rboop provides class-like function and Object oriented paradime.'
   spec.homepage      = 'http://dt.zonu.me/'
   spec.license       = 'GPLv3 or NYSL'
 
