@@ -1,8 +1,10 @@
-# Ruby::OOP
+rboop - RubyOOP
+===============
 
 Object-Oriented Programming for Ruby!!!!11
 
-## Installation
+Installation
+-------------
 
 Add this line to your application's Gemfile:
 
@@ -16,9 +18,30 @@ Or install it yourself as:
 
     $ gem install ruby-oop
 
-## Usage
+Usage
+-----
 
-TODO: Write usage instructions here
+### Define your class
+
+It's *mijisso*.
+
+```ruby
+require 'rboop'
+
+Animal = Klass[:new,
+  name: 'Animal',
+  methods: {
+    sounds: ->(this){
+      "#{this[:voice] * 2}!!"
+    },
+  }
+]
+
+Dog = Animal[:new,
+  name: 'Dog',
+  voice: "BowWow",
+]
+```
 
 ## Contributing
 
